@@ -1,0 +1,29 @@
+<!DOCTYPE html> 
+<html>
+<head>
+<script src="js/jquery-1.11.1.js" type="text/javascript"></script>
+<script type="text/javascript">
+ 
+$(document).ready(function() {
+$("#pulsar").click(function() {
+ 
+var mensaje="proceso terminado";
+ 
+var w1 = new Worker( "js/miworker.js");
+w1.postMessage(mensaje);
+w1.addEventListener("message",function(evento){
+ 
+$("body").append(evento.data);
+});
+})
+$("#mensaje").click(function() {
+alert ("esto es un mensaje");
+})
+});
+</script>
+</head>
+<body>
+<input type="button" id="pulsar" value="pulsar"/>
+<input type="button" id="mensaje" value="mensaje"/>
+</body>
+</html>

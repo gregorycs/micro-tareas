@@ -1,0 +1,1 @@
+Crear una pagina HTML usando SessionStorage que cuente cuantas veces le das click al boton de actualizar (el contador crece por cada vez que envia a actualizar y se resetea el contador cuando se cierra el navegador) 
